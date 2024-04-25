@@ -1,0 +1,156 @@
+/* CSS for desktop and larger devices */
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: rgb(145, 212, 217);
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+.container h1 {
+  color: rgb(81, 142, 147);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+.container span {
+  color: rgb(81, 142, 147);
+}
+header {
+  display: flex;
+  width: 30%;
+  margin: auto;
+  padding: 1px 0;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  justify-content: center;
+}
+.main-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  max-width: 400px;
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 0.7s ease forwards;
+}
+.section ul li {
+  text-align: left;
+}
+.section ul li {
+  text-align: left;
+}
+.section ul {
+  text-align: left;
+}
+.section:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.section:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.section:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.avatar {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+}
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.details ul {
+  list-style: none;
+  padding: 0;
+}
+.details ul li {
+  margin-bottom: 1px;
+}
+.info {
+  text-align: left;
+}
+.info ul {
+  padding-left: 0;
+}
+
+.info ul li {
+  margin-bottom: 10px;
+}
+.info ul li strong {
+  width: 150px;
+  display: inline-block;
+}
+.info ul li::after {
+  margin-right: 5px;
+}
+p {
+  padding: 10px;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+  .main-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .section {
+    max-width: 100%;
+    margin: 20px 0;
+  }
+  .avatar {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+  }
+}
+
+/* Media queries for mobile */
+@media only screen and (max-width: 480px) {
+  .container {
+    width: 100%;
+  }
+  .container h1 {
+    font-size: 24px;
+  }
+  .avatar {
+    width: 80px;
+    height: 80px;
+  }
+  .section {
+    padding: 20px;
+    margin: 10px 0;
+  }
+  .details ul li strong {
+    width: 100px;
+  }
+}
